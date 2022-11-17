@@ -21,12 +21,12 @@ phases:
       - npm run build
       - pwd
       - ls
-  # post-build:
-  #   commands:
-  #     - echo Updating files in the S3 bucket
-  #     - aws s3 sync dist/cicdres/ s3://cicdreacttestdemo --delete
+  post-build:
+    commands:
+      - echo Updating files in the S3 bucket
+      - aws s3 sync build/ s3://cicdreacttestdemo --delete
 artifacts:
   files:
     - '**/*'
   # discard-path: no
-  base-directory: dist
+  # base-directory: dist
