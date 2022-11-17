@@ -17,7 +17,7 @@ phases:
       - yarn
   build:
     commands:
-      - Echo Building...
+      - echo Building...
       - yarn build
   # post-build:
   #   commands:
