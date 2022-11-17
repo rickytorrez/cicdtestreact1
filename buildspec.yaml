@@ -18,7 +18,9 @@ phases:
   build:
     commands:
       - echo Building...
-      - yarn build
+      - npm run build
+      - pwd
+      - ls
   # post-build:
   #   commands:
   #     - echo Updating files in the S3 bucket
